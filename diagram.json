@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -148.76, "attrs": {} },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": 12.6,
+      "left": -15.6,
+      "rotate": 270,
+      "attrs": {}
+    },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -114.44, "left": -38.4, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -84,
+      "left": 193.8,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 153.6, "left": 210.6, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -134.4,
+      "left": 96,
+      "attrs": {
+        "text": "Buzzer simulando motor de vibração, em \num circuito a parte, acionado por um relé."
+      }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:4", "relay1:IN", "green", [ "h0" ] ],
+    [ "esp:GND.2", "relay1:GND", "black", [ "v0", "h38.4", "v96", "h57.6" ] ],
+    [ "esp:5V", "relay1:VCC", "red", [ "h0.15", "v38.4", "h182.4" ] ],
+    [ "vcc1:VCC", "relay1:COM", "red", [ "v38.4", "h78.2" ] ],
+    [ "relay1:NO", "bz1:2", "red", [ "v-39.6", "h94.2", "v86.4", "h77.2" ] ],
+    [ "bz1:1", "gnd1:GND", "black", [ "v153.6" ] ]
+  ],
+  "dependencies": {}
+}
