@@ -1,10 +1,11 @@
 # Projeto "PosturAI" (Global Solution 2º semestre 2k25)
 
-Este repositório contém o código-fonte desenvolvido para o projeto "PosturAI", parte da **Global Solution 2K25 Segundo Semestre da FIAP**. O projeto consiste em uma cadeira inteligente, conectada a uma IA de monitoramento de postura, desenvolvida em python. Quando a IA detecta uma má postura continua por mais de X tempo, envia o comando para que a cadeira vibre, indicando ao usuário que precisa ajeitar sua postura.
-
+Este repositório contém o código-fonte desenvolvido para o projeto "PosturAI", parte da **Global Solution 2K25 Segundo Semestre da FIAP**. O projeto consiste em uma cadeira inteligente, conectada a uma IA de monitoramento de postura.
 ## Contexto
 
-O projeto foi criado para demonstrar a conectividade entre os dispositivos IoT. Ele integra hardware e software, conectado a um broker MQTT, hospedado em uma máquina virtual local e aberta para a internet por meio de tuneis ngrok. Essa máquina virtual está rodando uma versão do ubuntu server, que por sua vez está executando diversos componentes baseados no repositório do Professor Fábio Cabrini (https://github.com/fabiocabrini/fiware).
+Em meio a crescente transição de trabalhos presenciais para remotos ou híbridos, surgiu a necessidade de adaptar a saúde laboral para este novo contexto. Com isso, surgiu a ideia do nosso projeto, que integra uma IA montada em python com as biblioteca `opencv` e `mediapipe`, onde irá ficar monitorando a postura do funcionário e caso ela permaneça desviada por mais que um tempo pré definido, é enviado uma requisição ao broker MQTT, que processará essa requisição e encaminhará ao ESP32, que por sua vez irá ligar um relé, fechando o circuito de um motor de vibração.
+
+Este projeto integra hardware e software, conectado a um broker MQTT, hospedado em uma máquina virtual local e aberta para a internet por meio de tuneis ngrok. Essa máquina virtual está rodando uma versão do ubuntu server, que por sua vez está executando diversos componentes baseados no repositório do Professor Fábio Cabrini (https://github.com/fabiocabrini/fiware).
 
 ---
 
@@ -68,6 +69,7 @@ Para executar o projeto, siga os passos abaixo:
 
 ## Links Úteis
 
+* **Acesso a Simulação Wokwi:** Acesse a simulação do [projeto](https://wokwi.com/projects/447811277727744001).
 * **Acesso ao Código:** Acesse o arquivo do [código principal](./src/main.ino).
 * **Biblioteca WiFi.h:** Acesse a documentação e exemplos da [biblioteca](https://docs.arduino.cc/libraries/wifi/).
 * **Biblioteca PubSubClient.h:** Acesse a documentação e exemplos da [biblioteca](https://docs.arduino.cc/libraries/pubsubclient/).
