@@ -74,6 +74,7 @@ Este guia foca na configuração do código que roda no **ESP32** (arquivo `src/
 | Recurso | Descrição | Link |
 | :--- | :--- | :--- |
 | **Simulação Wokwi** | Simulação online do circuito do ESP32. | [Acessar Simulação](https://wokwi.com/projects/447811277727744001) |
+| **Vídeo Pitch** | Vídeo Pitch apresentando a solução. | [Acessar Vídeo Pitch](https://youtu.be/D9cmcNED1_w) |
 | **Código Principal** | Código-fonte do ESP32/Arduino. | [main.ino](/FIAP-Global-Solution-2k25/Edge-Computing-And-Computer-Systems/blob/main/src/main.ino) |
 | **Repositório da Infra** | Referência ao repositório base para a configuração da VM. | [fabiocabrini/fiware](https://github.com/fabiocabrini/fiware) |
 | **Documentação ESP32** | Documentação oficial da plataforma. | [Docs ESP32](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html) |
